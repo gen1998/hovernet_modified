@@ -188,7 +188,8 @@ if __name__ == '__main__':
     file_path_list.sort()  # ensure same order
     assert len(file_path_list) > 0, 'Not Detected Any Files From Path'
 
-    file_path_list = file_path_list[500:1000]
+    start_index = int(args["start_index"])
+    file_path_list = file_path_list[start_index:start_index+500]
 
     if sub_cmd == 'tile':
         while True:
